@@ -1,0 +1,40 @@
+[package]
+name = "image-to-pixel-art"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["Sherotree <wytreeshero@163.com>"]
+license = "MIT"
+description = "Portable RGBA buffer → pixel-art pipeline (Pixel It algorithm): pixelate, grayscale, nearest palette, resize caps"
+repository = "https://github.com/sherotree/image-to-pixel-art-rs"
+homepage = "https://github.com/sherotree/image-to-pixel-art-rs"
+documentation = "https://docs.rs/image-to-pixel-art"
+readme = "README.md"
+keywords = ["pixel-art", "pixelate", "image", "palette", "rgba"]
+categories = ["multimedia::images", "graphics", "algorithms"]
+exclude = [".git*", "target/"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[lib]
+name = "image_to_pixel_art"
+path = "src/lib.rs"
+
+[dependencies]
+# Intentionally empty: pure `std` implementation for a portable RGBA pipeline.
+
+[dev-dependencies]
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
+
+[[example]]
+name = "palette"
+path = "examples/palette.rs"
+
+[[example]]
+name = "grayscale"
+path = "examples/grayscale.rs"
