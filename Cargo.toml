@@ -1,0 +1,51 @@
+[package]
+name = "image-to-pixel-art"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Portable image-to-pixel-art conversion (Pixel It algorithm + built-in palettes)."
+license = "MIT"
+readme = "README.md"
+keywords = ["pixel-art", "pixelate", "image", "palette", "rgba"]
+categories = ["multimedia::images", "graphics", "algorithms"]
+authors = ["Sherotree"]
+repository = "https://github.com/sherotree/image-to-pixel-art-rs"
+homepage = "https://github.com/sherotree/image-to-pixel-art-rs"
+documentation = "https://docs.rs/image-to-pixel-art"
+exclude = [
+    "/.git*",
+    "/target",
+]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[lib]
+name = "image_to_pixel_art"
+path = "src/lib.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+cast_precision_loss = "allow"
+cast_possible_truncation = "allow"
+cast_sign_loss = "allow"
+cast_possible_wrap = "allow"
+float_cmp = "allow"
+similar_names = "allow"
+doc_markdown = "allow"
+many_single_char_names = "allow"
+if_same_then_else = "allow"
+needless_range_loop = "allow"
